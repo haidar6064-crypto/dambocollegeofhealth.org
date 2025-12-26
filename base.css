@@ -1,0 +1,57 @@
+:root {
+  --bg: #ffffff;
+  --panel: #550d1f;
+  --text: #e5e7eb;
+  --muted: #9ca3af;
+  --primary: #22c55e;
+  --accent: #3b82f6;
+  --danger: #ef4444;
+}
+
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, "Noto Sans", sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+
+.header {
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 12px 20px; background: var(--panel); border-bottom: 1px solid #ffffff;
+}
+.brand { font-weight: 700; letter-spacing: 0.3px; }
+
+.sidebar {
+  position: fixed; top: 56px; left: 0; width: 240px; height: calc(100vh - 56px);
+  background: #550d1f; border-right: 1px solid #1f2937; padding: 12px;
+}
+.sidebar a {
+  display: block; padding: 10px 12px; border-radius: 8px; color: var(--text); text-decoration: none;
+}
+.sidebar a:hover { background: #0f1a30; }
+
+.main {
+  margin-left: 240px; padding: 20px; min-height: calc(100vh - 56px);
+}
+.panel {
+  background: var(--panel); border: 1px solid #daa3af; border-radius: 12px; padding: 16px; margin-bottom: 16px;
+}
+.grid {
+  display: grid; gap: 16px; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
+.btn {
+  display: inline-block; padding: 10px 14px; border-radius: 8px; text-decoration: none; color: var(--text);
+  background: var(--accent); border: none; cursor: pointer;
+}
+.btn-outline { background: transparent; border: 1px solid #fcfdff; }
+.input, select {
+  width: 100%; padding: 10px; border-radius: 8px; border: 1px solid #ffffff; background: #460e0e; color: var(--text);
+}
+.table {
+  width: 100%; border-collapse: collapse; overflow: hidden; border-radius: 12px;
+}
+.table th, .table td {
+  padding: 12px; border-bottom: 1px solid #ffffff; text-align: left;
+}
+.badge { padding: 4px 8px; border-radius: 999px; font-size: 12px; background: #2b73d6; }

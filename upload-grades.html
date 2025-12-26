@@ -1,0 +1,32 @@
+<!DOCTYPE html><html lang="en"><head>
+<meta charset="UTF-8"><title>Upload Grades</title>
+<link rel="stylesheet" href="../assets/css/base.css">
+</head><body>
+<header class="header"><div class="brand">Student Information Portal</div><nav class="user-nav"><a class="btn btn-outline" href="../index.html">Logout</a></nav></header>
+<aside class="sidebar"><ul>
+  <li><a href="./dashboard.html">Dashboard</a></li>
+  <li><a href="./manage-students.html">Manage Students</a></li>
+  <li><a href="./upload-grades.html">Upload Grades</a></li>
+  <li><a href="./attendance-records.html">Attendance Records</a></li>
+</ul></aside>
+<main class="main">
+  <section class="panel">
+    <h2>Upload grades</h2>
+    <form class="grid" id="gradeForm">
+      <div><label>Course</label><select class="input" id="course"><option>CSC401</option><option>CSC402</option></select></div>
+      <div><label>Matric number</label><input class="input" id="matric" placeholder="JIG/2021/1234"></div>
+      <div><label>Score</label><input class="input" id="score" type="number" min="0" max="100"></div>
+      <button class="btn" type="submit">Submit</button>
+    </form>
+    <div id="gradeMsg" class="panel" style="display:none;"></div>
+  </section>
+</main>
+<script>
+document.getElementById('gradeForm').addEventListener('submit', e => {
+  e.preventDefault();
+  const msg = document.getElementById('gradeMsg');
+  msg.style.display = 'block';
+  msg.textContent = 'Grade submitted (demo). Connect to backend to persist.';
+});
+</script>
+</body></html>
